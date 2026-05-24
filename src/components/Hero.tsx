@@ -35,19 +35,15 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Interactive neural network background */}
       <div className="absolute inset-0 opacity-80 dark:opacity-90">
         <HeroNeuralCanvas />
       </div>
 
-      {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50 dark:to-[#030712]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-500/5 dark:bg-cyan-500/[0.04] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-500/[0.04] rounded-full blur-3xl pointer-events-none" />
 
-      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto section-padding text-center">
-        {/* Name */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,7 +57,6 @@ export default function Hero() {
           <span className="gradient-text">{personalInfo.lastName}</span>
         </motion.h1>
 
-        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +66,6 @@ export default function Hero() {
           {personalInfo.tagline}
         </motion.p>
 
-        {/* Quick stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,7 +84,6 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -142,7 +135,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -1,8 +1,3 @@
-/* ─── Framer Motion Variants ────────────────────────────────────
-   Shared animation presets used across all section components.
-   Import what you need: import { fadeInUp, stagger } from "@/lib/animations"
-   ─────────────────────────────────────────────────────────────── */
-
 import type { Variants } from "framer-motion";
 
 export const fadeInUp: Variants = {

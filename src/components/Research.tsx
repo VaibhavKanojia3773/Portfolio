@@ -15,7 +15,6 @@ import ResearchFeature from "@/components/ResearchFeature";
 import { papers } from "@/data/research";
 import { fadeInUp, stagger } from "@/lib/animations";
 
-/* ─── Screenshot Lightbox ────────────────────────────────────── */
 function ScreenshotLightbox({
   src,
   alt,
@@ -61,7 +60,6 @@ function ScreenshotLightbox({
   );
 }
 
-/* ─── Secondary Paper Card ───────────────────────────────────── */
 function SecondaryPaperCard({
   paper,
   onScreenshotClick,
@@ -177,7 +175,6 @@ function SecondaryPaperCard({
   );
 }
 
-/* ─── Research Section ───────────────────────────────────────── */
 export default function Research() {
   const [lightboxSrc, setLightboxSrc] = useState<{
     src: string;

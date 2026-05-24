@@ -21,7 +21,6 @@ import {
 } from "@/data/projects";
 import { fadeInUp, stagger } from "@/lib/animations";
 
-/* ─── Featured Project Card ──────────────────────────────────── */
 function ProjectCard({
   project,
   onOpen,
@@ -42,7 +41,6 @@ function ProjectCard({
         transition-[border-color,box-shadow] duration-300"
       onClick={onOpen}
     >
-      {/* Image / themed placeholder */}
       <div className="relative h-48 overflow-hidden">
         {project.image ? (
           <Image
@@ -55,10 +53,8 @@ function ProjectCard({
           <ThemedPlaceholder theme={project.accentTheme} />
         )}
 
-        {/* Hover overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        {/* Award badge */}
         {project.award && (
           <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-sm">
             <Award size={11} className="text-white" />
@@ -68,7 +64,6 @@ function ProjectCard({
           </div>
         )}
 
-        {/* Year tag */}
         {project.year && (
           <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-slate-900/60 backdrop-blur-sm border border-white/10">
             <span className="text-[10px] font-mono text-slate-200 tracking-wide">
@@ -77,7 +72,6 @@ function ProjectCard({
           </div>
         )}
 
-        {/* View button on hover */}
         <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-medium text-slate-800 dark:text-slate-200">
             View Details
@@ -86,7 +80,6 @@ function ProjectCard({
         </div>
       </div>
 
-      {/* Card body */}
       <div className="flex flex-col flex-1 p-5">
         <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
           {project.title}
@@ -95,7 +88,6 @@ function ProjectCard({
           {project.subtitle}
         </p>
 
-        {/* Tech pills */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {project.techStack.slice(0, 4).map((tech) => (
             <span
@@ -114,12 +106,10 @@ function ProjectCard({
           )}
         </div>
 
-        {/* Problem preview */}
         <p className="text-sm text-slate-500 dark:text-slate-500 leading-relaxed line-clamp-2 flex-1">
           {project.problem}
         </p>
 
-        {/* Footer links */}
         <div className="flex items-center gap-4 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
           {project.links.github && (
             <a
@@ -154,7 +144,6 @@ function ProjectCard({
   );
 }
 
-/* ─── Project Detail Modal ───────────────────────────────────── */
 function ProjectModal({
   project,
   onClose,
@@ -202,7 +191,6 @@ function ProjectModal({
           <X size={18} />
         </button>
 
-        {/* Hero image / placeholder */}
         <div className="relative h-56 sm:h-64 overflow-hidden rounded-t-2xl">
           {project.image ? (
             <Image
@@ -341,7 +329,6 @@ function ProjectModal({
   );
 }
 
-/* ─── Projects Section ───────────────────────────────────────── */
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
