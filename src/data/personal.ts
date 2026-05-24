@@ -1,8 +1,3 @@
-/* ─── Personal Info ─────────────────────────────────────────────
-   Central config for all personal details.
-   Update links, bio, and roles here — every section reads from this.
-   ─────────────────────────────────────────────────────────────── */
-
 export const personalInfo = {
   name: "Vaibhav Kanojia",
   firstName: "Vaibhav",
@@ -15,15 +10,8 @@ export const personalInfo = {
   duration: "Aug 2023 – May 2027",
   cgpa: "8.5",
 
-  /* ── Photo ───────────────────────────────────────────────────
-     Place your photo in /public/images/ and set the path below.
-     Recommended: square crop, at least 400×400px.
-     ──────────────────────────────────────────────────────────── */
   photo: "/images/vaibhav.jpg",
 
-  /* ── Social / Contact Links ──────────────────────────────────
-     Fill in your URLs below. Leave empty strings as placeholders.
-     ──────────────────────────────────────────────────────────── */
   links: {
     github: "https://github.com/VaibhavKanojia3773",
     linkedin: "https://linkedin.com/in/vaibhav-kanojia-186b3b319",
@@ -32,7 +20,6 @@ export const personalInfo = {
     twitter: "",
   },
 
-  /* ── Rotating roles shown in Hero ──────────────────────────── */
   roles: [
     "ML Research",
     "Multilingual NLP",
@@ -40,7 +27,6 @@ export const personalInfo = {
     "Agentic Systems",
   ],
 
-  /* ── About Section ─────────────────────────────────────────── */
   about: [
     "I build ML systems that generalize, scale, and survive production. My work sits at the intersection of deep learning research and systems engineering, the parts most papers skip and most production code avoids.",
     "Lately I've been thinking about parameter isolation in multilingual encoders, agentic systems that can recover from their own mistakes, and what production-grade ML infrastructure actually looks like outside big-lab budgets. My published work at IJCNLP-AACL 2025 came out of asking why shared encoders break in low-resource settings; the answer turned into a framework, not just a result.",
@@ -65,7 +51,6 @@ export const personalInfo = {
     },
   ],
 
-  /* ── Skills / Stack ────────────────────────────────────────── */
   skills: {
     languages: ["Python", "C", "C++"],
     mlStack: ["PyTorch", "TensorFlow", "Scikit-learn", "NumPy", "Pandas"],

@@ -1,8 +1,3 @@
-/* ─── Experience ────────────────────────────────────────────────
-   Add new roles by appending to the array.
-   Entries are rendered in the order they appear here.
-   ─────────────────────────────────────────────────────────────── */
-
 export interface Experience {
   id: string;
   role: string;
@@ -21,10 +16,10 @@ export const experiences: Experience[] = [
     location: "Delhi, India",
     duration: "Jan 2025 – Mar 2025",
     highlights: [
-      "Designed a 4-stage architecture for a self-learning CBT chatbot using BERT-based sentiment analysis, topic modelling, and clustering for cognitive distortion discovery.",
-      "Engineered Python prototypes to preprocess and analyse ~300 simulated dialogue samples, documenting research gaps in hallucination control and personalization.",
+      "Architected a 4-stage self-learning CBT chatbot leveraging BERT-based sentiment analysis, BERTopic-driven topic modelling, and unsupervised clustering to surface cognitive distortions directly from unlabeled conversational data.",
+      "Authored Python preprocessing and analysis prototypes over ~300 simulated dialogue samples, formalizing open research gaps in hallucination control, persona conditioning, and long-horizon dialogue safety for downstream publication.",
     ],
-    techUsed: ["BERT", "Python", "NLP", "Clustering", "Topic Modelling"],
+    techUsed: ["BERT", "BERTopic", "Python", "NLP", "Clustering"],
   },
   {
     id: "infosys",
@@ -33,8 +28,8 @@ export const experiences: Experience[] = [
     location: "India",
     duration: "Oct 2024 – Dec 2024",
     highlights: [
-      "Developed a CNN-based OCR system in PyTorch and OpenCV, training on ~60K samples with automated preprocessing and augmentation.",
-      "Set up a batch inference pipeline processing 1K samples per test cycle with reproducible evaluation & logging workflows.",
+      "Shipped an end-to-end OCR pipeline in PyTorch + OpenCV, training a custom convolutional architecture on a 60K-sample corpus with automated preprocessing, normalization, and augmentation to harden the model against real-world noise.",
+      "Stress-tested the network against LeNet and ResNet-18 under identical augmentation, optimizer, and seed protocols; the custom model beat ResNet-18 by ~0.4% accuracy at one-third the parameter count and half the training time, served behind a reproducible batch-inference pipeline at 1K samples per cycle.",
     ],
     techUsed: ["PyTorch", "OpenCV", "CNN", "OCR", "Python"],
   },

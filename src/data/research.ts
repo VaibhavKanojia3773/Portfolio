@@ -1,16 +1,3 @@
-/* ─── Research Papers ──────────────────────────────────────────
-   Add new papers by appending to the array.
-
-   Screenshots:
-     Place paper screenshots in /public/images/research/
-     Then set screenshot to "/images/research/your-file.png"
-     Leave "" for the themed generative placeholder.
-
-   Summary PDFs:
-     Place the local summary file in /public/ and reference it
-     via the `summary` field (e.g. "/Research_Summary.pdf").
-   ─────────────────────────────────────────────────────────────── */
-
 export interface Paper {
   id: string;
   title: string;

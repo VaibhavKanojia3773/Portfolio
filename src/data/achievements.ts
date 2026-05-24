@@ -1,8 +1,3 @@
-/* ─── Achievements ──────────────────────────────────────────────
-   Add new achievements by appending to the arrays below.
-   `stats` power the animated counters. `items` appear as cards.
-   ─────────────────────────────────────────────────────────────── */
-
 export interface Stat {
   label: string;
   value: number;

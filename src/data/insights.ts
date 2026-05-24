@@ -1,8 +1,3 @@
-/* ─── Insights & Explorations ──────────────────────────────────
-   "How I Think" quotes and "Currently Exploring" topics.
-   Add, remove, or reorder freely.
-   ─────────────────────────────────────────────────────────────── */
-
 export interface Insight {
   id: string;
   text: string;

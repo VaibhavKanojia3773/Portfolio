@@ -1,13 +1,3 @@
-/* ─── Projects ──────────────────────────────────────────────────
-   Add new projects by appending to the array below.
-   Each project follows the same shape — just copy one and edit.
-
-   Images:
-     Place screenshots in /public/images/projects/
-     Then set image to "/images/projects/your-file.png"
-     Leave "" to fall back to the themed generative placeholder.
-   ─────────────────────────────────────────────────────────────── */
-
 export type AccentTheme =
   | "neural"
   | "galaxy"
@@ -41,7 +31,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  /* ─── FEATURED ─────────────────────────────────────────────── */
   {
     id: "gitgalaxy",
     title: "GitGalaxy",
@@ -53,16 +42,8 @@ export const projects: Project[] = [
     problem:
       "Reading a large codebase file-by-file misses the shape of the system — which modules cluster, which are outliers, where the gravity is. Traditional file trees flatten this structure away.",
     approach:
-      "Embed every code symbol with jinaai/jina-embeddings-v2-base-code (768-dim), project to 3D via UMAP, index with FAISS for sub-20ms semantic search, and render an interactive WebGL galaxy. Tree-sitter parses code structure; an optional qwen2.5-coder:7b layer adds cluster explanations and impact analysis. All models run locally — no API keys.",
-    techStack: [
-      "Jina Embeddings",
-      "UMAP",
-      "FAISS",
-      "Tree-sitter",
-      "FastAPI",
-      "WebGL",
-      "Ollama",
-    ],
+      "Used jina-embeddings-v2-base-code to generate 768-dim representations for every typed symbol extracted by Tree-sitter, then projected the resulting manifold into 3D with UMAP for spatial exploration in WebGL. Tuned a FAISS index delivering sub-20ms queries over the embedded corpus, backed by a content-addressed cache that loads pre-computed repos instantly; runs fully on-device with no API keys.",
+    techStack: ["3D Knowledge Graph", "Semantic Search"],
     metrics: [
       { label: "Search Latency", value: "<20ms" },
       { label: "Embed Dim", value: "768" },
@@ -77,8 +58,7 @@ export const projects: Project[] = [
   {
     id: "project-synapse",
     title: "Project Synapse",
-    subtitle:
-      "Autonomous ReAct agent for last-mile delivery disruptions — built for GrabHack",
+    subtitle: "Autonomous agent for last-mile delivery disruptions",
     tier: "featured",
     accentTheme: "agent",
     year: "2025",
@@ -86,16 +66,8 @@ export const projects: Project[] = [
     problem:
       "Last-mile delivery breaks in unpredictable ways — overloaded merchants, packaging disputes, recipient unavailability, traffic. Rule-based alerts can't reason about novel combinations of these failures.",
     approach:
-      "Custom ReAct loop (perceive → plan → execute → reflect → close) with a typed tool registry. LLM provider fallback chain: Gemini 2.5 Flash → GPT-4o-mini → deterministic Mock — fully functional offline. Streamlit + Folium UI surfaces evidence trails and driver re-routing. No LangChain — every decision is logged and replayable.",
-    techStack: [
-      "ReAct",
-      "Gemini",
-      "OpenAI",
-      "TomTom Maps",
-      "Streamlit",
-      "Folium",
-      "Python",
-    ],
+      "Designed a custom ReAct loop (perceive → plan → execute → reflect → close) over a typed tool registry, exposing function signatures to the LLM and orchestrating multi-tool resolution plans for last-mile delivery disruptions. Built structured trace logging for every plan, tool call, and reflection step, with a 3-tier provider fallback that degrades gracefully to a deterministic mock — the agent runs end-to-end with no internet, no API keys, and no LangChain.",
+    techStack: ["Agentic AI", "Multi-Step Reasoning"],
     metrics: [
       { label: "Fallback Chain", value: "3-tier" },
       { label: "Services", value: "Food · Express · Car" },
@@ -119,7 +91,7 @@ export const projects: Project[] = [
       "Clinicians need diagnostic context in seconds — but switching between EHR, imaging, and reference material breaks flow. Existing assistants don't speak to vision artifacts (scans, reports) or handle voice in real time.",
     approach:
       "Built a RAG + LLM system for real-time voice-based clinical interaction. Deployed ResNet-based vision models with OpenCV to parse medical reports automatically, returning context-aware insights grounded in retrieved clinical references.",
-    techStack: ["LLMs", "RAG", "ResNet", "OpenCV", "CNNs", "Python"],
+    techStack: ["RAG + Vision", "Voice Interaction"],
     metrics: [
       { label: "Interaction", value: "Real-time Voice" },
       { label: "Report Parsing", value: "Automated" },
@@ -134,7 +106,7 @@ export const projects: Project[] = [
   {
     id: "protect-her",
     title: "ProtectHer",
-    subtitle: "Tri-model CV pipeline + risk-aware navigation for urban safety",
+    subtitle: "Risk-aware urban-safety web application",
     tier: "featured",
     accentTheme: "vision",
     year: "2024",
@@ -142,18 +114,12 @@ export const projects: Project[] = [
     problem:
       "Urban safety apps either react after-the-fact or rely on static heatmaps. Real protection needs continuous threat inference fused with routing that adapts to live signals.",
     approach:
-      "Integrated a tri-model CV pipeline — emotion detection, harassment-context classification, gender recognition — evaluated on ~300 curated video clips. Risk-aware navigation runs Dijkstra's algorithm over a hotspot graph aggregated from ~2K live inference events, re-weighting edges as new threats are detected.",
-    techStack: [
-      "PyTorch",
-      "OpenCV",
-      "React",
-      "Dijkstra",
-      "CNNs",
-    ],
+      "Built a 4-stage browser pipeline that fuses lightweight face and attribute detectors with a custom VGG16 + Dense-head harassment classifier trained on 1K paired frames to 88.5% accuracy, running at 30 FPS locally. Implemented a Dijkstra-based safest-route picker that re-ranks candidate routes via a hotspot-weighted edge model, alongside a domain-grounded safety assistant primed with Indian helpline directories and legal context for emergency-first responses.",
+    techStack: ["Multi-Stage Computer Vision", "Graph Routing"],
     metrics: [
-      { label: "Combined Accuracy", value: "~82%" },
-      { label: "Inference Events", value: "~2K" },
-      { label: "Video Clips", value: "~300" },
+      { label: "Classifier Accuracy", value: "88.5%" },
+      { label: "Throughput", value: "30 FPS" },
+      { label: "Pipeline", value: "4-stage" },
     ],
     links: {
       github: "https://github.com/VaibhavKanojia3773/ProtectHer",
@@ -162,7 +128,6 @@ export const projects: Project[] = [
     },
   },
 
-  /* ─── LAB STRIP ────────────────────────────────────────────── */
   {
     id: "neurosynx",
     title: "NeuroSynX",
@@ -176,7 +141,7 @@ export const projects: Project[] = [
       "EEG datasets are small and class-imbalanced — models overfit to majority classes and stay black-boxed.",
     approach:
       "Time + frequency feature extraction (FFT, wavelets), denoising and SVM baselines, WGAN-GP for class-balanced synthetic EEG, then SHAP + saliency analysis on 1K+ samples to read channel-level importance and failure modes.",
-    techStack: ["WGAN-GP", "SHAP", "SVM", "FFT", "Wavelets", "Python"],
+    techStack: ["Generative Modelling", "Explainable AI"],
     metrics: [
       { label: "Accuracy", value: "0.96" },
       { label: "ROC-AUC", value: "0.92" },
@@ -200,7 +165,7 @@ export const projects: Project[] = [
       "Course playlists carry great content but no reproducible artifact you can read, search, or cite.",
     approach:
       "Five-phase deterministic pipeline (only 2 phases touch an LLM). Transcripts via local cache → YouTube captions → yt-dlp → Whisper. Per-chapter LLM framing capped at 15% of word count. Provider-agnostic via LiteLLM (Gemini / Claude / Groq / Ollama). Content-addressed cache means comment-only edits don't invalidate downstream builds.",
-    techStack: ["LiteLLM", "yt-dlp", "ReportLab", "Whisper", "SQLite"],
+    techStack: ["Deterministic Pipeline", "Multi-Provider LLM"],
     metrics: [
       { label: "LLM Framing Cap", value: "≤15%" },
       { label: "Providers", value: "4" },
@@ -224,13 +189,7 @@ export const projects: Project[] = [
       "Generic test reports tell students their score but not what to do next.",
     approach:
       "Parses subject + chapter-level performance JSON, forces time-vs-accuracy analysis in prompts (no empty insights), and renders a styled PDF combining Matplotlib charts with LLM-generated narrative feedback. Multi-provider — OpenAI, Claude, Gemini.",
-    techStack: [
-      "Streamlit",
-      "Matplotlib",
-      "Gemini",
-      "ReportLab",
-      "Python",
-    ],
+    techStack: ["LLM Prompting", "Report Generation"],
     metrics: [
       { label: "Granularity", value: "Subject + Chapter" },
       { label: "Output", value: "Styled PDF" },
@@ -254,7 +213,7 @@ export const projects: Project[] = [
       "Manual crater annotation on orbital imagery doesn't scale — and pure-CV pipelines miss small craters under varied illumination.",
     approach:
       "Hybrid pipeline: Gaussian blur + Canny edge detection + contour extraction for candidates, CNN classifier with rotation/scale augmentation for verification. Outputs selenographic position, diameter, and polygonal shape files for each detection.",
-    techStack: ["CNN", "OpenCV", "PDS4", "Python"],
+    techStack: ["Hybrid CV", "Orbital Imagery"],
     metrics: [
       { label: "Imagery", value: "OHRC" },
       { label: "Output", value: "Shape Files" },
