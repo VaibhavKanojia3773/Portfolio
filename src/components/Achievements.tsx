@@ -40,7 +40,7 @@ export default function Achievements() {
               className="text-center p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40
                 hover:border-cyan-300 dark:hover:border-cyan-500/30 transition-all duration-300"
             >
-              <div className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-1">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 dark:text-white mb-1 leading-tight break-words">
                 <AnimatedCounter
                   value={stat.value}
                   prefix={stat.prefix}
