@@ -9,7 +9,7 @@ const lines = [
   { prompt: "~$", command: "Who am I", delay: 380 },
   {
     prompt: "",
-    command: "vaibhav_kanojia · DTU '27 · CGPA 8.5",
+    command: "Vaibhav Kanojia",
     delay: 320,
     isOutput: true,
   },
