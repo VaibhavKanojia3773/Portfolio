@@ -7,18 +7,29 @@ const SESSION_KEY = "portfolio-intro-played";
 
 const lines = [
   { prompt: "~$", command: "Who am I", delay: 380 },
-  { prompt: "", command: "Vaibhav Kanojia", delay: 320, isOutput: true },
-  { prompt: "~$", command: "cat focus.txt", delay: 320 },
   {
     prompt: "",
-    command: "ML  ·  AI  ·  Multilingual NLP  ·  Agentic Systems",
+    command: "vaibhav_kanojia · DTU '27 · CGPA 8.5",
     delay: 320,
     isOutput: true,
   },
-  { prompt: "~$", command: "./portfolio --start", delay: 400 },
+  { prompt: "~$", command: "cat ./signal", delay: 320 },
   {
     prompt: "",
-    command: "▸ initializing neural net…",
+    command: "1 paper (IJCNLP–AACL '25) · 4 hackathon wins",
+    delay: 280,
+    isOutput: true,
+  },
+  {
+    prompt: "",
+    command: "top 1% amazon ml · top 2% wunder quant",
+    delay: 320,
+    isOutput: true,
+  },
+  { prompt: "~$", command: "./portfolio --launch", delay: 400 },
+  {
+    prompt: "",
+    command: "▸ doors open in 3… 2… 1…",
     delay: 500,
     isOutput: true,
   },
