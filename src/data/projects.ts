@@ -271,7 +271,7 @@ export const projects: Project[] = [
       { label: "Modes", value: "5" },
     ],
     links: {
-      github: "",
+      github: "https://github.com/VaibhavKanojia3773/shl-recommender",
       demo: "https://shl-recommender-2dxd.onrender.com",
       paper: "",
     },
