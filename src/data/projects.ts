@@ -127,6 +127,56 @@ export const projects: Project[] = [
       paper: "",
     },
   },
+  {
+    id: "signal",
+    title: "SIGNAL",
+    subtitle:
+      "Developer-intelligence agent — JOINs your GitHub, Claude Code, HN, arXiv into one live newspaper",
+    tier: "featured",
+    accentTheme: "agent",
+    year: "2026",
+    image: "",
+    problem:
+      'Developers run their morning across 7+ tabs — GitHub, HN, arXiv, npm, Claude Code logs, calendar, Stack Overflow. The interesting questions ("are my AI sessions producing commits?", "is HN talking about anything near my repos?") need cross-source queries no single tool can run.',
+    approach:
+      'Built 18 dashboard sections, each backed by a live Coral SQL query that JOINs heterogeneous sources — github.user_repos × hackernews.stories, claude.events × github.commits, arxiv × github × youtube. The First Mate agent uses Groq\'s tool-use API on Llama 3.3 70B to generate Coral SQL dynamically: you ask "why has my velocity dropped?", it picks sources, writes the SQL itself, and surfaces the answer. Shipped 10 custom Coral source specs (HN, arXiv, npm, PyPI, HuggingFace, Dev.to, Reddit, Stack Overflow, YouTube, WakaTime).',
+    techStack: ["Cross-Source SQL", "Tool-Use Agent"],
+    metrics: [
+      { label: "Live Sections", value: "18" },
+      { label: "Source Specs", value: "10" },
+      { label: "Agent", value: "Tool-Use Loop" },
+    ],
+    links: {
+      github: "https://github.com/VaibhavKanojia3773/Signal",
+      demo: "",
+      paper: "",
+    },
+  },
+  {
+    id: "grant-writer",
+    title: "GrantWriter",
+    subtitle: "Production AI platform for NIH SBIR Phase I grants",
+    tier: "featured",
+    accentTheme: "rag",
+    year: "2026",
+    award: "Y Combinator",
+    image: "",
+    problem:
+      "Writing an NIH SBIR Phase I grant takes weeks for deep-tech startups: Specific Aims, Research Strategy, and Biosketch must follow strict page rules, cite credible prior work, and align with the FOA scoring rubric. Most founders write them by hand or pay consultants $10K+.",
+    approach:
+      "Multi-tenant SaaS (Clerk auth, Stripe checkout, Neon Postgres + pgvector, Vercel Blob) that ingests pitch deck + CVs + whitepaper, runs a two-pass coarse-draft → refine → cite pipeline against the NIH FOA solicitation and scoring rubric, and produces compliance-linted PDFs. Retrieval uses Voyage AI embeddings over a 2,705-row corpus of historical R43 grants from NIH RePORTER (2020-2025); citations are clickable inline in the editor.",
+    techStack: ["Vector Retrieval", "Compliance-Linted Generation"],
+    metrics: [
+      { label: "Grant Corpus", value: "2,705 rows" },
+      { label: "Docs / Run", value: "3 in parallel" },
+      { label: "Format", value: "NIH-compliant PDF" },
+    ],
+    links: {
+      github: "https://github.com/VaibhavKanojia3773/grant-writer",
+      demo: "https://grant-writer-snowy.vercel.app",
+      paper: "",
+    },
+  },
 
   {
     id: "neurosynx",
@@ -198,6 +248,31 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/VaibhavKanojia3773/EdTech-AI-Coach",
       demo: "",
+      paper: "",
+    },
+  },
+  {
+    id: "shl-ai-assessment",
+    title: "SHL AI Assessment",
+    subtitle:
+      "Multi-turn dialogue agent that matches corporate hiring needs to SHL's assessment catalog",
+    tier: "lab",
+    accentTheme: "rag",
+    year: "2025",
+    image: "",
+    problem:
+      'Hiring managers describe roles in natural language ("senior Java backend, India, under 45 min"), but assessment catalogs are SKU-indexed. Bridging the two without forcing the user to learn the catalog is the job.',
+    approach:
+      "FastAPI + Groq stack with a two-tier LLM: Llama 3.1 8B for sub-second intent classification, Llama 3.3 70B for the main reasoning. RAG over a ChromaDB index of the catalog, with five conversational modes — clarify, recommend, refine, compare, refuse — triggered by intent. Every returned URL is validated against the catalog at output time; unknown URLs are silently dropped as a hallucination guard.",
+    techStack: ["RAG Recommender", "Multi-Turn Reasoning"],
+    metrics: [
+      { label: "Intent Latency", value: "<1s" },
+      { label: "LLM Tiers", value: "2" },
+      { label: "Modes", value: "5" },
+    ],
+    links: {
+      github: "",
+      demo: "https://shl-recommender-2dxd.onrender.com",
       paper: "",
     },
   },
