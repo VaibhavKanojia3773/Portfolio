@@ -16,7 +16,7 @@ export default function CurrentlyExploring() {
   return (
     <section id="exploring" className="py-28 section-padding">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading number="07" title="Currently Exploring" />
+        <SectionHeading number="06" title="Currently Exploring" />
 
         <motion.div
           variants={stagger}

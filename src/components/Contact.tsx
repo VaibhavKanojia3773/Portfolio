@@ -39,7 +39,7 @@ export default function Contact() {
       className="py-28 section-padding bg-slate-50/50 dark:bg-slate-900/20"
     >
       <div className="max-w-3xl mx-auto text-center">
-        <SectionHeading number="08" title="Get in Touch" className="text-center [&>div]:justify-center" />
+        <SectionHeading number="07" title="Get in Touch" className="text-center [&>div]:justify-center" />
 
         <motion.p
           variants={fadeInUp}
