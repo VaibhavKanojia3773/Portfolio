@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Vaibhav Kanojia",
   firstName: "Vaibhav",
   lastName: "Kanojia",
-  tagline: "AI engineer · published researcher · 0→1 builder",
+  tagline: "AI Engineer · Published Researcher · 0→1 Builder",
   location: "Delhi, India",
 
   university: "Delhi Technological University (DCE)",
