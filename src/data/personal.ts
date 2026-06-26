@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Vaibhav Kanojia",
   firstName: "Vaibhav",
   lastName: "Kanojia",
-  tagline: "Building reliable, production-grade ML systems",
+  tagline: "AI engineer · published researcher · 0→1 builder",
   location: "Delhi, India",
 
   university: "Delhi Technological University (DCE)",
@@ -28,26 +28,26 @@ export const personalInfo = {
   ],
 
   about: [
-    "I build ML systems that generalize, scale, and survive production. My work sits at the intersection of deep learning research and systems engineering, the parts most papers skip and most production code avoids.",
-    "Lately I've been thinking about parameter isolation in multilingual encoders, agentic systems that can recover from their own mistakes, and what production-grade ML infrastructure actually looks like outside big-lab budgets. My published work at IJCNLP-AACL 2025 came out of asking why shared encoders break in low-resource settings; the answer turned into a framework, not just a result.",
-    "I care about the unglamorous parts: evaluation rigor, distribution shift, failure modes, and the bits between a clean notebook and a system that runs. Every project I take on starts with the same question: does this actually work beyond the leaderboard?",
+    "I'm an AI engineer who treats research and production as one continuous problem. I build systems that have to work in front of real users, not just on a held-out test set: agents, retrieval pipelines, LLM products, and the infrastructure underneath all three.",
+    "My published work at IJCNLP-AACL 2025 came from a research question that turned into a framework. Lately I've been thinking about agentic systems that recover from their own mistakes, RAG that actually grounds, and what it takes to ship AI at startup velocity without breaking the model along the way.",
+    "I care about the unglamorous parts: evaluation rigor, distribution shift, failure modes, and the bits between a clean notebook and a product users keep coming back to. Every project I take on starts with the same question: does this actually work beyond the leaderboard?",
   ],
 
   focusAreas: [
     {
-      title: "ML Systems",
+      title: "AI Product Engineering",
       description:
-        "End-to-end pipelines that handle data drift, failure modes, and scale — not just accuracy on a test set.",
+        "Owning the stack end-to-end: research, models, retrieval, agents, evals, and the UX layer that decides whether any of it lands.",
     },
     {
-      title: "Generalization & Robustness",
+      title: "Agentic Systems",
       description:
-        "Models that maintain performance across distributions, domains, and real-world noise.",
+        "Autonomous systems that reason, plan, and recover from their own mistakes, not just predict the next token.",
     },
     {
       title: "Research → Production",
       description:
-        "Bridging the gap between paper results and deployed systems that teams actually rely on.",
+        "Bringing paper-grade rigor to AI products that have to ship now and survive real users from day one.",
     },
   ],
 
