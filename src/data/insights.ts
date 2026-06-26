@@ -44,15 +44,15 @@ export const explorations: Exploration[] = [
     id: "agentic-ai",
     title: "Agentic AI Systems",
     description:
-      "Building autonomous systems that can reason, plan, and execute multi-step tasks — not just predict.",
+      "Building autonomous systems that can reason, plan, and execute multi-step tasks, not just predict.",
     icon: "bot",
   },
   {
-    id: "quant-research",
-    title: "Quant Research & Alpha Modeling",
+    id: "ai-products",
+    title: "0 → 1 AI Products",
     description:
-      "Applying ML rigor to alpha generation, feature engineering for systematic strategies, and market microstructure.",
-    icon: "trending-up",
+      "Engineering production AI under startup constraints: small teams, fast iteration, real users from day one.",
+    icon: "rocket",
   },
   {
     id: "generative-models",

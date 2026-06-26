@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, TrendingUp, Sparkles } from "lucide-react";
+import { Bot, Rocket, Sparkles } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { explorations } from "@/data/insights";
 import { fadeInUp, stagger } from "@/lib/animations";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const iconMap: Record<string, React.ElementType> = {
   bot: Bot,
-  "trending-up": TrendingUp,
+  rocket: Rocket,
   sparkles: Sparkles,
 };
 
