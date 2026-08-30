@@ -10,16 +10,16 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    id: "igdtuw",
-    role: "ML Research Intern",
-    organization: "IGDTUW",
-    location: "Delhi, India",
-    duration: "Jan 2025 – Mar 2025",
+    id: "opentrade",
+    role: "Software Engineering Intern",
+    organization: "OpenTrade",
+    location: "Y Combinator S26",
+    duration: "July 2026 – Present",
     highlights: [
-      "Architected a 4-stage self-learning CBT chatbot leveraging BERT-based sentiment analysis, BERTopic-driven topic modelling, and unsupervised clustering to surface cognitive distortions directly from unlabeled conversational data.",
-      "Authored Python preprocessing and analysis prototypes over ~300 simulated dialogue samples, formalizing open research gaps in hallucination control, persona conditioning, and long-horizon dialogue safety for downstream publication.",
+      "First engineering hire at OpenTrade (YC S26); conceptualized and shipped the platform's first in-app game from zero as the sole engineer, reporting directly to the CEO & CTO.",
+      "Building and iterating on AI-driven systems that power core product features, from data pipelines to real-time delivery logic.",
     ],
-    techUsed: ["BERT", "BERTopic", "Python", "NLP", "Clustering"],
+    techUsed: ["AI Systems", "Data Pipelines", "Product Engineering"],
   },
   {
     id: "infosys",
